@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import ClassComponentFirst from "./pages/classComponentFirst/ClassComponentFirst";
+import ClassComponentSecond from "./pages/classComponentSecond/ClassComponentSecond";
+import HelloBtn from "./components/helloBtn/HelloBtn";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const user = {name: "Anna", age: 19}
+    return (
+        <div className="App">
+            <ClassComponentFirst userInfo = {user}/>
+            <ClassComponentSecond userInfo = {user}/>
+            <HelloBtn/>
+        </div>
+    );
 }
 
 export default App;
